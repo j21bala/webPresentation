@@ -141,14 +141,14 @@ const App = () => {
           <div className={`text-gray-400 text-sm mb-2 transition-all duration-1000 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`} style={{ transitionDelay: '0.2s' }}>
-            2024
+            2025
           </div>
           
           <h1 className={`text-6xl md:text-8xl font-bold text-white mb-8 leading-none transition-all duration-1000 ${
             isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'
           }`} style={{ transitionDelay: '0.4s' }}>
-            <span className="block animate-pulse">TU</span>
-            <span className="block animate-pulse" style={{ animationDelay: '0.5s' }}>NOMBRE</span>
+            <span className="block animate-pulse">JUAN</span>
+            <span className="block animate-pulse" style={{ animationDelay: '0.5s' }}>BALAGUERA</span>
           </h1>
 
           {/* Content based on active section */}
@@ -159,13 +159,10 @@ const App = () => {
               {activeSection === 'about' && (
                 <div className="text-gray-300 leading-relaxed animate-fade-in">
                   <p className="mb-4 transform transition-all duration-700 hover:translate-x-2">
-                    Desarrollador Full Stack apasionado por crear experiencias digitales 
-                    extraordinarias. Especializado en tecnologías modernas como React, 
-                    Node.js y bases de datos avanzadas.
+                    Estudiante de ing. de sistemas 6to semestre. En formación como programador junior. Interes por la programación front-end y back-end.
                   </p>
                   <p className="transform transition-all duration-700 hover:translate-x-2">
-                    Mi enfoque combina creatividad técnica con soluciones prácticas, 
-                    siempre buscando la excelencia en cada proyecto que desarrollo.
+                    Mi enfoque combina creatividad con la innovación y sobretodo el enfoque práctico y moderno.
                   </p>
                 </div>
               )}
@@ -178,10 +175,10 @@ const App = () => {
                 <div className="text-gray-300">
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     {[
-                      { title: 'Frontend', tech: 'React, Vue, TypeScript, Tailwind' },
-                      { title: 'Backend', tech: 'Node.js, Python, PostgreSQL' },
+                      { title: 'Frontend', tech: 'React, Angular, Tailwind' },
+                      { title: 'Backend', tech: 'Java, Python' },
                       { title: 'Tools', tech: 'Git, Docker, AWS, Figma' },
-                      { title: 'Mobile', tech: 'React Native, Flutter' }
+                      { title: 'Mobile', tech: 'En proceso' }
                     ].map((skill, index) => (
                       <div
                         key={skill.title}
