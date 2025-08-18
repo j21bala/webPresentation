@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import perfil from './assets/perfil.jpg';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -38,12 +39,6 @@ const App = () => {
   const MailIcon = () => (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-    </svg>
-  );
-
-  const UserIcon = () => (
-    <svg className="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
     </svg>
   );
 
@@ -162,7 +157,7 @@ const App = () => {
                     Estudiante de ing. de sistemas 6to semestre. En formación como programador junior. Interes por la programación front-end y back-end.
                   </p>
                   <p className="transform transition-all duration-700 hover:translate-x-2">
-                    Mi enfoque combina creatividad con la innovación y sobretodo el enfoque práctico y moderno.
+                    Mi enfoque combina creatividad con la innovación utilizando la practicidad y la modernidad.
                   </p>
                 </div>
               )}
@@ -204,9 +199,9 @@ const App = () => {
                 <div className="text-gray-300">
                   <div className="space-y-4">
                     {[
-                      { title: 'E-commerce Platform', desc: 'Plataforma completa con React y Node.js', tags: ['React', 'Node.js'] },
-                      { title: 'Portfolio Website', desc: 'Sitio web moderno y responsivo', tags: ['Vue.js', 'Tailwind'] },
-                      { title: 'Mobile App', desc: 'Aplicación móvil con React Native', tags: ['React Native', 'Firebase'] }
+                      { title: 'Finanzia', desc: 'Plataforma para regular las cuentas del usuario', tags: ['React', 'Python'] },
+                      { title: 'Portafolio Website', desc: 'Sitio web moderno y responsivo', tags: ['HTML5', 'CSS', 'JS'] },
+                      
                     ].map((project, index) => (
                       <div
                         key={project.title}
@@ -241,12 +236,12 @@ const App = () => {
             }`}>
               {activeSection === 'contact' && (
                 <div className="text-gray-300">
-                  <p className="mb-4 animate-fade-in">¿Tienes un proyecto en mente? Me encantaría colaborar contigo.</p>
+                  <p className="mb-4 animate-fade-in">Para empezar un proyecto: </p>
                   <div className="space-y-3">
                     {[
-                      { Icon: MailIcon, text: 'tu.email@gmail.com' },
-                      { Icon: LinkedinIcon, text: 'linkedin.com/in/tu-perfil' },
-                      { Icon: GithubIcon, text: 'github.com/tu-usuario' }
+                      { Icon: MailIcon, text: 'juanda.balaguerag@gmail.com' },
+                      { Icon: LinkedinIcon, text: 'linkedin.com/in/Juan-Balaguera' },
+                      { Icon: GithubIcon, text: 'github.com/j21bala' }
                     ].map(({ Icon, text }, index) => (
                       <div
                         key={text}
@@ -270,12 +265,7 @@ const App = () => {
           <div className={`flex space-x-4 transition-all duration-1000 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`} style={{ transitionDelay: '0.8s' }}>
-            <button className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 group">
-              <div className="transition-transform duration-300 group-hover:rotate-12">
-                <PlayIcon />
-              </div>
-              <span>VER DEMO</span>
-            </button>
+            
             <button className="flex items-center space-x-2 border border-gray-600 hover:border-red-500 text-gray-300 hover:text-white px-6 py-3 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/20">
               <span>DESCARGAR CV</span>
             </button>
@@ -291,14 +281,19 @@ const App = () => {
             {/* Hero Character Silhouette */}
             <div className="w-80 h-96 bg-gradient-to-b from-gray-800 to-black rounded-lg border border-red-500/30 flex items-center justify-center relative overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 group">
               <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent"></div>
-              <div className="text-red-500/50 text-6xl transition-all duration-500 group-hover:scale-110 group-hover:text-red-400/70">
-                <UserIcon />
-              </div>
+              
+              {/* Usa la imagen en lugar del icono del usuario */}
+              <img
+                src={perfil}
+                alt="Juan Balaguera - Perfil"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              
               {/* Overlay effects */}
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
               <div className="absolute bottom-4 left-4 text-white text-sm transition-all duration-300 group-hover:translate-y-[-2px]">
-                <div className="font-semibold">Desarrollador</div>
-                <div className="text-gray-400">Full Stack Developer</div>
+                <div className="font-semibold">Desarrollador Junior en Formación</div>
+                <div className="text-gray-400">Frontend y Backend</div>
               </div>
               {/* Animated border effect */}
               <div className="absolute inset-0 rounded-lg border border-red-500/50 animate-pulse"></div>
